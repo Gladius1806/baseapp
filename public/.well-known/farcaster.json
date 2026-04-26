@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Base Airdrop Mini App",
+    "subtitle": "Quiz + Airdrop Calculator",
+    "description": "Estimate your potential BASE airdrop via a 10-question profile quiz and calculator.",
+    "iconUrl": "https://your-app-domain.vercel.app/favicon.svg",
+    "splashImageUrl": "https://your-app-domain.vercel.app/og.png",
+    "homeUrl": "https://your-app-domain.vercel.app",
+    "primaryCategory": "finance",
+    "tags": ["base", "airdrop", "quiz", "calculator"]
+  }
+}
