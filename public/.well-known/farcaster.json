@@ -7,7 +7,7 @@
   "miniapp": {
     "version": "1",
     "name": "Base Airdrop Mini App",
-    "subtitle": "Quiz + Airdrop Calculator",
+    "subtitle": "Quiz and Airdrop Calculator",
     "description": "Estimate your potential BASE airdrop via a 10-question profile quiz and calculator.",
     "iconUrl": "https://baseapp-airdropcal.vercel.app/icons.svg",
     "splashImageUrl": "https://baseapp-airdropcal.vercel.app/icons.svg",
