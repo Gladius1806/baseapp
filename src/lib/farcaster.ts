@@ -8,9 +8,11 @@ export async function safeReadySignal() {
   }
 }
 
-export async function shareResultOnFarcaster(text: string) {
+export async function shareResultOnFarcaster(options: { text: string }) {
   try {
-    await sdk.actions.composeCast({ text })
+    await sdk.actions.composeCast({
+      text: options.text,
+    })
     return true
   } catch {
     return false

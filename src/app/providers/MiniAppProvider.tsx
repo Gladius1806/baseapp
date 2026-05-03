@@ -8,7 +8,6 @@ export function MiniAppProvider({ children }: PropsWithChildren) {
     isInMiniApp: false,
     isInitialized: false,
     context: null,
-    walletAvailable: false,
     error: null,
   })
 
@@ -19,7 +18,6 @@ export function MiniAppProvider({ children }: PropsWithChildren) {
       try {
         const isInMiniApp = await sdk.isInMiniApp()
         const context = isInMiniApp ? await sdk.context : null
-        const ethereumProvider = isInMiniApp ? await sdk.wallet.getEthereumProvider() : undefined
 
         await safeReadySignal()
 
@@ -28,7 +26,6 @@ export function MiniAppProvider({ children }: PropsWithChildren) {
           isInMiniApp,
           isInitialized: true,
           context,
-          walletAvailable: Boolean(ethereumProvider),
           error: null,
         })
       } catch (error) {

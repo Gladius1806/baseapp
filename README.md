@@ -6,8 +6,8 @@ Vite + React + TypeScript + TailwindCSS + `@farcaster/miniapp-sdk` ile gelistiri
 
 - 10 soruluk oznel Base airdrop testi
 - FDV + supply yuzdesi ile USD airdrop hesaplayici
-- Farcaster cast paylasimi (`composeCast`) ve X paylasim fallback
-- Mini app initialize akisi (`MiniAppProvider`, `useMiniApp`)
+- Farcaster cast paylasimi (`composeCast`) ve X paylasimi
+- Mini app initialize akisi (`MiniAppProvider`)
 - Vercel/Farcaster/Base App yayin adimlarina uygun temel altyapi
 
 ## Kurulum
@@ -24,6 +24,14 @@ npm run lint
 npm run build
 ```
 
+## Ortam Degiskenleri
+
+Production'da uygulama URL'si icin (manifest/meta ile uyum):
+
+```bash
+VITE_APP_URL=https://your-production-domain.vercel.app
+```
+
 ## Proje Yapisi
 
 ```text
@@ -34,7 +42,7 @@ src/
   features/
     quiz/QuizSection.tsx
     calculator/AirdropCalculatorSection.tsx
-    mint-share/MintShareSection.tsx
+    share/ShareSection.tsx
   hooks/useMiniApp.ts
   lib/farcaster.ts
   lib/quiz.ts
@@ -48,21 +56,18 @@ src/
 
 1. GitHub'a gonder:
    ```bash
-   git init
    git add .
-   git commit -m "Initial mini app setup"
-   git branch -M main
-   git remote add origin <REPO_URL>
-   git push -u origin main
+   git commit -m "Deploy mini app"
+   git push
    ```
 2. Vercel'de yeni proje olustur, GitHub repo bagla ve deploy et.
 3. Vercel domainini Farcaster Developers panelindeki Manifest alanina ekle.
-4. Account association QR adimini tamamla.
+4. Account association QR adimini tamamla ve `public/.well-known/farcaster.json` icindeki placeholder URL'leri gercek domain ile degistir.
 5. `base.dev` uzerinde Vercel URL ile Mini App yayinla.
 
-## Hata Duzeltme Dongusu
+Detayli kontrol listesi: `docs/publish-checklist.md`
 
-Hata alirsan asagidaki donguyu uygula:
+## Hata Duzeltme Dongusu
 
 1. Hata logu veya ekran goruntusu al.
 2. Cursor'a ilet ve duzeltmeyi uygula.
