@@ -29,7 +29,7 @@ npm run build
 Production'da uygulama URL'si icin (manifest/meta ile uyum):
 
 ```bash
-VITE_APP_URL=https://your-production-domain.vercel.app
+VITE_APP_URL=https://baseapp-airdropcal.vercel.app
 ```
 
 ## Proje Yapisi
